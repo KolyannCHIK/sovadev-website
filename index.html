@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SovaDev | Разработчик</title>
+    <style>
+        :root {
+            --bg-color: #0f0f11; 
+            --card-bg: #1e1e24; 
+            --text-main: #ffffff;
+            --text-secondary: #a0a0a0;
+            --accent-red: #ff3b3b; 
+            --accent-glow: rgba(255, 59, 59, 0.4);
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --font-code: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .card-container {
+            background-color: var(--card-bg);
+            width: 100%;
+            max-width: 400px;
+            border-radius: 24px; 
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+            transition: transform 0.3s ease;
+        }
+
+        .card-container:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-red);
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 20px; 
+            border: 3px solid var(--accent-red);
+            box-shadow: 0 0 20px var(--accent-glow);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: var(--font-code);
+            font-size: 28px;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+        }
+
+        .role {
+            color: var(--accent-red);
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .bio {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .skill-tag {
+            background-color: rgba(255, 59, 59, 0.1);
+            color: var(--accent-red);
+            border: 1px solid var(--accent-red);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-family: var(--font-code);
+            font-weight: bold;
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-red);
+            color: white;
+            box-shadow: 0 4px 15px var(--accent-glow);
+        }
+
+        .btn-primary:hover {
+            background-color: #ff5252;
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px var(--accent-glow);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid #333;
+            color: var(--text-main);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-main);
+            background-color: rgba(255,255,255, 0.05);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            background-color: var(--accent-red);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <img src="logo.png" alt="SovaDev Photo" class="avatar">
+        
+        <h1>SovaDev<span class="cursor">_</span></h1>
+        
+        <span class="role">Self-taught Developer</span>
+        
+        <p class="bio">
+            Разработчик-самоучка. Создаю умных ботов для Telegram и удобные Android-приложения. 
+            Постоянно учусь новому, а в свободное время работаю курьером.
+        </p>
+
+        <div class="skills-container">
+            <span class="skill-tag">Kotlin</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Swift</span>
+        </div>
+
+        <div class="buttons-container">
+            <a href="https://t.me/sovadevs" target="_blank" class="btn btn-primary">
+                Написать в Telegram ✈️
+            </a>
+            <a href="mailto:joke@sovadev.ru" class="btn btn-secondary">
+                Email: joke@sovadev.ru 📧
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
